@@ -3,7 +3,7 @@ cask "ory-admin-ui" do
   name "ory-admin-ui"
   desc "The admin user interface for Ory services"
   homepage "https://github.com/licenseware/ory-admin-ui"
-  version "0.1.0"
+  version "0.1.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "ory-admin-ui" do
   on_macos do
     on_intel do
       url "https://github.com/licenseware/ory-admin-ui/releases/download/v#{version}/ory-admin-ui_darwin_amd64.tar.gz"
-      sha256 "7ba2d04b3688090443eae9d48fe17704a9062cbc3b860172bb6ff2bff359de88"
+      sha256 "2aefe1d97bca79ae8057ccf28844b487c71c166adcf1ae9bd8e7aac31904026d"
     end
     on_arm do
       url "https://github.com/licenseware/ory-admin-ui/releases/download/v#{version}/ory-admin-ui_darwin_arm64.tar.gz"
-      sha256 "dd2b03b81b4b650e3062c6f9d7c3ef82c04d0f12075c467ed9529556942a8328"
+      sha256 "4d27fee5a599068f7fbcf98207167296cd29dfa26b476f63de2eff5ac0a0fa82"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/licenseware/ory-admin-ui/releases/download/v#{version}/ory-admin-ui_linux_amd64.tar.gz"
-      sha256 "eeb57f1a8e5d154123c25aeff1c14ad450524fc8585492dabe687c2687eeed3a"
+      sha256 "95bc1eff0cbe31b04d949801ec7ac315a84a0041e0987a7942138bde1277ebf9"
     end
     on_arm do
       url "https://github.com/licenseware/ory-admin-ui/releases/download/v#{version}/ory-admin-ui_linux_arm64.tar.gz"
-      sha256 "3f5fbca289263609d51ac326009283fa55aba145b5004f4f81408e98f76f82c2"
+      sha256 "28c7684f1df968a6b311b2500870e033787d853b877458657bc66ce1f67426b6"
     end
   end
 

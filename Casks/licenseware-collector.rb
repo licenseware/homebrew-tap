@@ -3,7 +3,7 @@ cask "licenseware-collector" do
   name "licenseware-collector"
   desc "Licenseware Collector Agent."
   homepage "https://licenseware-collector.com"
-  version "0.9.2"
+  version "0.10.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,17 +13,23 @@ cask "licenseware-collector" do
 
   on_macos do
     url "https://github.com/licenseware/collector/releases/download/v#{version}/collector_darwin_all.tar.gz"
-    sha256 "dc27392db897a64a31634414a9dcbb968d8a8f745bfb6ea97847495f2923a36c"
+    sha256 "85dfd1882818fb8651d490c938196ec0f9725f989b616e17c197094eb748eb74"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/licenseware/collector/releases/download/v#{version}/collector_linux_amd64.tar.gz"
-      sha256 "18dedb64a59d9afb267dfc917cb5e5a8e6a76b1468d804059212a1afadcb20b6"
+      sha256 "392341c43ca3627b6bc63930c3676f68e6cd993990b6fde98ff4032a97a03029"
     end
     on_arm do
       url "https://github.com/licenseware/collector/releases/download/v#{version}/collector_linux_arm64.tar.gz"
-      sha256 "b2c81749e123749ee11c376c1abd5af135da0261fa5ea1bdb450983937eada7b"
+      sha256 "849f11a89232cd7a96413d260ca1d4a0952347d84f54c39e5bb812b7aa2de988"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/licenseware-collector"]
     end
   end
 

@@ -3,7 +3,7 @@ cask "licenseware-collector" do
   name "licenseware-collector"
   desc "Licenseware Collector Agent."
   homepage "https://licenseware-collector.com"
-  version "0.10.0"
+  version "0.10.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,17 +13,17 @@ cask "licenseware-collector" do
 
   on_macos do
     url "https://github.com/licenseware/collector/releases/download/v#{version}/collector_darwin_all.tar.gz"
-    sha256 "85dfd1882818fb8651d490c938196ec0f9725f989b616e17c197094eb748eb74"
+    sha256 "4a4337ebb1dadc00769feb8ee9da421e416d0216cd8bf073ece5654f8d7747ac"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/licenseware/collector/releases/download/v#{version}/collector_linux_amd64.tar.gz"
-      sha256 "392341c43ca3627b6bc63930c3676f68e6cd993990b6fde98ff4032a97a03029"
+      sha256 "b91394e5b45e134b1b7c6e0be06cc515d14705f94459e73e2def73960fafb539"
     end
     on_arm do
       url "https://github.com/licenseware/collector/releases/download/v#{version}/collector_linux_arm64.tar.gz"
-      sha256 "849f11a89232cd7a96413d260ca1d4a0952347d84f54c39e5bb812b7aa2de988"
+      sha256 "fd5ff227ed8d26405c4b1f8aef9744709dd4e2d28dc1b996b0c8414323e63ad8"
     end
   end
 
